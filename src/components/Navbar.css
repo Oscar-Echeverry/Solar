@@ -1,0 +1,201 @@
+/* Reset de márgenes y padding para todos los elementos */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h3{
+  font-size: 22px
+}
+
+/* Barra de navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(45deg, rgba(38, 70, 83, 1), rgba(72, 104, 118, 1)); /* Degradado suave */
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: background 0.5s ease, box-shadow 0.3s ease;
+  border-bottom: 4px solid #81b29a; /* Línea elegante al fondo */
+  animation: navbarAnimation 1s ease-out; /* Animación de aparición suave al cargar */
+}
+
+.navbar:hover {
+  background: linear-gradient(45deg, rgba(81, 178, 154, 1), rgba(38, 70, 83, 1)); /* Cambia el degradado al pasar el ratón */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Efecto de sombra más pronunciado */
+}
+
+/* Animación de la barra de navegación */
+@keyframes navbarAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos del logo y título */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: transform 0.5s ease;
+  animation: logoAnimation 1s ease-out; /* Animación de aparición suave para el logo */
+}
+
+@keyframes logoAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-logo:hover .logo {
+  transform: scale(1.15); /* Efecto de zoom en el logo */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor del logo */
+}
+
+.navbar-logo h2 {
+  font-size: 2.2rem;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transiciones para color y sombra de texto */
+}
+
+.navbar-logo:hover h2 {
+  color: #81b29a; /* Cambio de color */
+  text-shadow: 0 0 10px rgba(129, 178, 154, 0.7); /* Sombra suave para el texto */
+}
+
+/* Estilos de los enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  animation: linksAnimation 1s ease-out; /* Animación de aparición suave para los enlaces */
+}
+
+@keyframes linksAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.nav-links li {
+  font-size: 1.1rem;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 22px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #81b29a;
+  color: #1e3a8a;
+  transform: scale(1.05); /* Efecto de escala suave en hover */
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Sombra en el texto al pasar por encima */
+.nav-links a:hover {
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  .navbar-logo h2 {
+    font-size: 1.8rem;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo h2 {
+    font-size: 1.6rem;
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .nav-links li {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    padding: 12px 30px;
+  }
+}
+

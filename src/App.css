@@ -1,0 +1,514 @@
+/* Estilos Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navbar ul li {
+  padding: 0 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #28a745; /* Color verde al pasar el mouse */
+}
+
+/* Hero Section (Imagen grande de fondo) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Pantalla completa */
+  background-image: url('https://th.bing.com/th/id/R.c52a6f6591e18c8fb6b0590475985989?rik=hBHkc696gH8hkw&pid=ImgRaw&r=0'); /* Cambia esta URL por la de tu imagen */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding-top: 80px; /* Espacio extra arriba para separar del navbar */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Superposición oscura */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  color: #f4f4f4;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.hero .btn {
+  font-size: 1.2em;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #28a745;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+.btn {
+  background-color: #007bff;
+  transition: background-color 0.3s;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* Sección de Contenido */
+.section-content {
+  padding: 50px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-content p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.section-content ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.section-content ul li {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Cards o Bloques para los servicios (instalación, educación, etc.) */
+.card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card p {
+  font-size: 1.1em;
+  color: #777;
+}
+
+.card .btn {
+  margin-top: 20px;
+  background-color: #28a745;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #218838;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1.1em;
+}
+
+/* Formulario de Contacto */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  padding: 12px;
+  font-size: 1em;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 12px 30px;
+  font-size: 1.2em;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Alerta de rendimiento bajo */
+.alert {
+  color: #ff0000;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2.5em;
+  }
+
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 20px;
+  }
+}
+/* Sección Instalación */
+.section.installation {
+  position: relative;
+  width: 100%;
+  padding: 60px 0; /* Añadimos un poco de espacio superior e inferior */
+  background-image: url('https://th.bing.com/th/id/OIP.7W8jUn1P6UOYwKWB3Ev8nQHaE8?rs=1&pid=ImgDetMain');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.section.installation .section-content {
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+  padding: 40px 20px;
+  border-radius: 8px;
+  max-width: 1200px; /* Limitar el tamaño máximo del contenido */
+  width: 90%;
+  text-align: center;
+}
+
+.section.installation h2 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.section.installation p {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.section.installation ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Hacer que las tarjetas sean flexibles */
+  gap: 20px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.section.installation ul li {
+  background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco con algo de transparencia */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section.installation .icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.section.installation h3 {
+  font-size: 1.8em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section.installation p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.section.installation .btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.section.installation .btn:hover {
+  background-color: #218838;
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 768px) {
+  .section.installation h2 {
+    font-size: 2em;
+  }
+
+  .section.installation p {
+    font-size: 1.1em;
+  }
+
+  .section.installation ul {
+    grid-template-columns: 1fr; /* En pantallas más pequeñas, las tarjetas se apilan */
+  }
+
+  .section.installation li {
+    padding: 20px;
+  }
+
+  .section.installation .btn {
+    font-size: 1.1em;
+    padding: 10px 25px;
+  }
+}
+/* Estilos Generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Sección de Educación */
+.section.education {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-image: url('https://th.bing.com/th/id/R.61f05c24557580da9a533d846c458fba?rik=neIhLLuiVMlrrw&pid=ImgRaw&r=0'); /* Cambiar a la imagen deseada */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+.section-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.section-content p {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Sombra para mejorar la legibilidad */
+}
+
+/* Contenedor de Cursos */
+.courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Estilo de cada tarjeta de curso */
+.course-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease;
+  width: 280px;
+  text-align: center;
+}
+
+.course-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.course-card h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.course-card p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.course-card .course-icon {
+  font-size: 3em;
+  margin-bottom: 15px;
+}
+
+.course-card .btn {
+  background-color: #28a745;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  color: white;
+  text-align: center;
+}
+
+.course-card .btn:hover {
+  background-color: #218838;
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 768px) {
+  .section-content h2 {
+    font-size: 2em;
+  }
+
+  .section-content p {
+    font-size: 1.2em;
+  }
+
+  .courses-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+}
