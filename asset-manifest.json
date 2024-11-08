@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Solar/static/css/main.65bac2f0.css",
+    "main.js": "/Solar/static/js/main.14b8f8e1.js",
+    "static/js/453.12a0534b.chunk.js": "/Solar/static/js/453.12a0534b.chunk.js",
+    "static/media/Logo.png": "/Solar/static/media/Logo.64736d037e617cb904c4.png",
+    "index.html": "/Solar/index.html",
+    "main.65bac2f0.css.map": "/Solar/static/css/main.65bac2f0.css.map",
+    "main.14b8f8e1.js.map": "/Solar/static/js/main.14b8f8e1.js.map",
+    "453.12a0534b.chunk.js.map": "/Solar/static/js/453.12a0534b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.65bac2f0.css",
+    "static/js/main.14b8f8e1.js"
+  ]
+}
